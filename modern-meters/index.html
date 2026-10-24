@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modern Meters – Windows desktop gadgets</title>
+<meta name="description" content="Modern CPU, GPU, Network, Drives and Weather gadgets for the Windows Sidebar (8GadgetPack). 12 languages, glass, classic, light, colored glass, retro terminal and Liquid Glass styles. Free.">
+<meta property="og:title" content="Modern Meters – Windows desktop gadgets">
+<meta property="og:image" content="https://livonianlabs.github.io/modern-meters/img/themes-glass.png">
+<link rel="icon" href="/favicon.png">
+<link rel="stylesheet" href="/style.css">
+<style>
+  .row { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; margin: 20px 0; align-items: start; }
+  .row img { width: 100%; display: block; }
+  .wide { width: 100%; border-radius: 14px; display: block; margin: 18px 0; box-shadow: 0 6px 18px #0006; }
+  .btn { display: inline-block; background: var(--accent); color: #1a1205; font-weight: 600; text-decoration: none; border-radius: 12px; padding: 12px 22px; margin: 8px 0 4px; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="/">← Livonian Labs</a></p>
+  <h1>Modern Meters</h1>
+  <p class="lead">Five modern desktop gadgets for Windows: CPU, GPU, Network, Drives and Weather. Free, in 12 languages.</p>
+  <a class="btn" href="https://github.com/Silverenio/modern-meters/releases/latest">Download the latest version</a>
+  <p style="color:var(--muted);margin-top:4px">Needs the Windows Sidebar from <a href="https://8gadgetpack.net/">8GadgetPack</a>.</p>
+
+  <img class="wide" src="img/themes-glass.png" alt="Liquid Glass and Aero gadgets over a wallpaper">
+
+  <div class="row">
+    <img src="img/cpu-glass.png" alt="CPU Meter">
+    <img src="img/gpu-glass.png" alt="GPU Meter">
+    <img src="img/network-glass.png" alt="Network Meter">
+    <img src="img/drives-glass.png" alt="Drives Meter">
+    <img src="img/weather-glass.png" alt="Weather Meter">
+  </div>
+
+  <div class="card">
+    <h2>The gadgets</h2>
+    <ul>
+      <li><strong>CPU Meter</strong> — load of every thread or core (P- and E-cores grouped), clock, temperature, RAM and commit, history graph, uptime; click the processor for the busiest programs</li>
+      <li><strong>GPU Meter</strong> — load, VRAM, power, fan, clocks, encoder/decoder, temperature; NVIDIA, AMD and Intel, discrete and integrated</li>
+      <li><strong>Network Meter</strong> — download and upload speed, Wi-Fi and signal, IP addresses (hidden until clicked), firewall, ping, traffic totals</li>
+      <li><strong>Drives Meter</strong> — disks and partitions, SMART health, SSD life left, temperature, read/write speed</li>
+      <li><strong>Weather Meter</strong> — current weather, hourly chart (temperature, precipitation, wind, pressure), rain radar, 3 or 5 days, sunrise and sunset, UV and air quality</li>
+    </ul>
+    <h2>Styles</h2>
+    <p>Glass, Classic, Light, Colored glass in eight accent colors, Retro terminal with scanlines, black-and-white, Norton Commander and Ubuntu terminals, Windows classic, Aero and Liquid Glass with your wallpaper blurred underneath, and Auto, which follows Windows' light or dark mode.</p>
+  </div>
+
+  <img class="wide" src="img/themes.png" alt="Light, colored glass and retro terminal styles">
+  <img class="wide" src="img/themes-retro.png" alt="Terminal, Norton Commander, Ubuntu and Windows classic styles">
+
+  <div class="card">
+    <h2>Install</h2>
+    <ol>
+      <li>Install <a href="https://8gadgetpack.net/">8GadgetPack</a> if you don't have the Sidebar yet.</li>
+      <li>Download the <code>.gadget</code> files from the <a href="https://github.com/Silverenio/modern-meters/releases/latest">latest release</a> and double-click the ones you want.</li>
+      <li>Right-click the desktop → Gadgets, and drag a gadget onto the desktop. Settings are under the wrench icon.</li>
+    </ol>
+    <p>New versions show a small ↑ badge on the gadgets; one click updates all of them. Nothing is installed without that click.</p>
+    <h2>Privacy</h2>
+    <p>No tracking. Network Meter asks api.ipify.org for your external IP (can be turned off). Weather Meter gets the forecast from Open-Meteo with coordinates rounded to about 1 km; picking a city by hand turns location off. Once a day one gadget asks GitHub whether a new version exists.</p>
+  </div>
+
+  <footer>Open source under the MIT license. Contact: <a href="mailto:livonianlabs@gmail.com">livonianlabs@gmail.com</a></footer>
+</main>
+</body>
+</html>
