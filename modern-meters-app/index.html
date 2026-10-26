@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modern Meters – desktop gadgets for Windows</title>
+<meta name="description" content="CPU, GPU, Network, Drives and Weather gadgets for Windows 10 and 11, in their own windows, no 8GadgetPack needed. 18 styles, 13 languages, updates in a click.">
+<meta property="og:title" content="Modern Meters – desktop gadgets for Windows">
+<meta property="og:image" content="https://livonianlabs.github.io/modern-meters-app/img/styles-1.png">
+<link rel="icon" href="/favicon.png">
+<link rel="stylesheet" href="/style.css">
+<style>
+  .wide { width: 100%; border-radius: 14px; display: block; margin: 18px 0; box-shadow: 0 6px 18px #0006; }
+  .btn { display: inline-block; background: var(--accent); color: #1a1205; font-weight: 600; text-decoration: none; border-radius: 12px; padding: 12px 22px; margin: 8px 0 4px; }
+  .note { color: var(--muted); margin-top: 4px; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; }
+  td { padding: 5px 8px; border-top: 1px solid #ffffff14; vertical-align: top; }
+  td:first-child { white-space: nowrap; font-weight: 600; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="/">← Livonian Labs</a></p>
+  <div class="hero">
+    <img src="img/icon.png" alt="">
+    <div>
+      <h1>Modern Meters</h1>
+      <span class="badge">Beta 0.9</span>
+    </div>
+  </div>
+  <p class="lead">CPU, GPU, Network, Drives and Weather gadgets for Windows 10 and 11, each in its own small window on the desktop. No 8GadgetPack needed.</p>
+  <a class="btn" href="https://github.com/livonianlabs/modern-meters-app-releases/releases/latest">Download the latest version</a>
+  <p class="note">Windows 10 or 11, 64-bit. Unpack the zip anywhere and run <code>ModernMeters.exe</code>.</p>
+
+  <img class="wide" src="img/styles-1.png" alt="GPU Meter in the Glass, Neon, Retro terminal and Matrix styles">
+
+  <div class="card">
+    <h2>The gadgets</h2>
+    <ul>
+      <li><strong>CPU</strong> — total load and its graph, clock, uptime, the busiest program, memory, every core (P- and E-cores apart) or every thread, temperatures</li>
+      <li><strong>GPU</strong> — load, video memory, memory controller, power, fan, clocks, temperature, encoder and decoder, PCIe link; NVIDIA read directly, others through DirectX</li>
+      <li><strong>Network</strong> — download and upload with a graph, Wi-Fi and signal, addresses (hidden until clicked), firewall, link, ping, traffic totals</li>
+      <li><strong>Drives</strong> — every disk with its partitions, health, SSD life left, temperature, read and write speed</li>
+      <li><strong>Weather</strong> — now, the next hours as a chart, rain in the next two hours, three days, sunrise and sunset, UV and air quality</li>
+    </ul>
+    <p>A <strong>live zone</strong> at the right of the CPU and Network graphs shows the last seconds five times a second, so short spikes show at once. The gadgets line up along the right edge by themselves and stay on the desktop when you press <em>Show desktop</em>.</p>
+  </div>
+
+  <img class="wide" src="img/cpu.png" alt="CPU Meter in the Glass, Neon, Matrix and Rainbow styles">
+
+  <div class="card">
+    <h2>18 styles, each with a touch of its own</h2>
+    <table>
+      <tr><td>Liquid, Air</td><td>the desktop shows through, blurred; a highlight follows the mouse, light streaks drift</td></tr>
+      <tr><td>Glass, Colored glass</td><td>see-through; a glint sweeps over the glass, the accent rim breathes</td></tr>
+      <tr><td>Classic, Light</td><td>an activity light flares with each update; big numbers count to their new value</td></tr>
+      <tr><td>Carbon, Rainbow</td><td>a lacquer gleam runs along the bars; every row in its own color, flowing</td></tr>
+      <tr><td>Retro terminal</td><td>the cursor erases the title and types it again; the graph's beam glows like an oscilloscope's</td></tr>
+      <tr><td>More terminals</td><td>aubergine with a shell prompt, black and white switching on like an old tube, blue commander with a selection bar</td></tr>
+      <tr><td>Matrix</td><td>code rains behind the meters, the title decodes itself</td></tr>
+      <tr><td>Neon</td><td>cyan and magenta glowing, the title flickers like a sign</td></tr>
+      <tr><td>Gray 90s</td><td>beveled gray, segmented bars, the title bar lights up while the mouse is on it</td></tr>
+    </table>
+    <p>Plus Auto, which follows Windows' light or dark mode, an accent color of your choice, and 13 languages.</p>
+  </div>
+
+  <img class="wide" src="img/styles-2.png" alt="GPU Meter in the Gray 90s, Rainbow, Light and Carbon styles">
+
+  <div class="card">
+    <h2>Install</h2>
+    <ol>
+      <li>Download <code>ModernMeters-…-win-x64.zip</code> from the <a href="https://github.com/livonianlabs/modern-meters-app-releases/releases/latest">latest release</a>.</li>
+      <li>Unpack it into a folder of your choice and run <code>ModernMeters.exe</code>. The first start lines the gadgets up and asks whether to start with Windows.</li>
+      <li>If Windows says <em>"Windows protected your PC"</em>, click <strong>More info → Run anyway</strong>, as for any new program that isn't signed yet.</li>
+    </ol>
+    <p>Everything is in the menu of the tray icon by the clock: gadgets, line them up, style, accent color, language, always on top, animations, start with Windows. Drag a gadget by its title; ⚙ and ✕ appear under the mouse.</p>
+    <h2>Updates</h2>
+    <p>Once a day the app looks for a new version. It shows as a small ↑ on the gadgets' titles, and a click installs it; or let it install updates by itself.</p>
+    <h2>Privacy</h2>
+    <p>No tracking. The app connects to Open-Meteo for the weather, api.ipify.org for your external IP, 1.1.1.1 for the ping and GitHub for the update check. Settings stay on your computer.</p>
+  </div>
+
+  <div class="card">
+    <h2>Support</h2>
+    <p>Questions, ideas or bugs: <a href="https://github.com/livonianlabs/modern-meters-app-releases/issues">open an issue</a>. If you like it, you can <a href="https://ko-fi.com/silverenio">buy us a coffee on Ko-fi</a>. Using the Windows Sidebar? The same gadgets exist <a href="/modern-meters/">for 8GadgetPack</a>, free and open source.</p>
+  </div>
+
+  <footer>Windows, DirectX and Microsoft Edge are trademarks of Microsoft; NVIDIA, Intel and AMD are trademarks of their owners. Modern Meters is not affiliated with them. Contact: <a href="mailto:livonianlabs@gmail.com">livonianlabs@gmail.com</a></footer>
+</main>
+</body>
+</html>
