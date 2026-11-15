@@ -8,6 +8,7 @@
 <meta property="og:title" content="Modern Meters – desktop gadgets for Windows">
 <meta property="og:image" content="https://livonianlabs.github.io/modern-meters-app/img/styles-1.png">
 <link rel="icon" href="/favicon.png">
+<link rel="stylesheet" href="/site.css">
 <link rel="stylesheet" href="/style.css">
 <style>
   .wide { width: 100%; border-radius: 14px; display: block; margin: 18px 0; box-shadow: 0 6px 18px #0006; }
@@ -17,14 +18,21 @@
   td { padding: 5px 8px; border-top: 1px solid #ffffff14; vertical-align: top; }
   td:first-child { white-space: nowrap; font-weight: 600; }
 </style>
+<script type="speculationrules">{"prerender":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}</script>
 </head>
 <body>
+<header class="site-head">
+  <a class="logo" href="/"><img src="/favicon.png" alt="" width="26" height="26"><span>Livonian Labs</span></a>
+  <nav aria-label="Products">
+    <a href="/flipsky/">FlipSky</a>
+    <a href="/modern-meters-app/" aria-current="page">Modern Meters</a>
+  </nav>
+</header>
 <main>
-  <p><a href="/">← Livonian Labs</a></p>
   <div class="hero">
     <img src="img/icon.png" alt="">
     <div>
-      <h1>Modern Meters</h1>
+      <h1 style="view-transition-name:mm-title">Modern Meters</h1>
       <span class="badge">Beta 0.9</span>
     </div>
   </div>
@@ -32,7 +40,7 @@
   <a class="btn" href="https://github.com/livonianlabs/modern-meters-app-releases/releases/latest">Download the latest version</a>
   <p class="note">Windows 10 or 11, 64-bit. Unpack the zip anywhere and run <code>ModernMeters.exe</code>.</p>
 
-  <img class="wide" src="img/styles-1.png" alt="GPU Meter in the Dark, Neon 77, Digital rain and Atompunk styles">
+  <img class="wide" style="view-transition-name:mm-shot" src="img/styles-1.png" alt="GPU Meter in the Dark, Neon 77, Digital rain and Atompunk styles">
 
   <div class="card">
     <h2>The gadgets</h2>

@@ -1,0 +1,68 @@
+/*
+ * Livonian Labs: the chrome every page shares (the bar at the top, the foot) and the moves between pages.
+ * Pages are plain HTML (fast, indexable, no build); the browser animates going from one to the next.
+ */
+:root {
+  --bg: #070b16;
+  --ink: #eef2fa;
+  --muted: #9aa8c2;
+  --amber: #ffc45c;
+  --mint: #8ff0c8;
+  --card: #10172a;
+  --line: #ffffff17;
+  --head-h: 60px;
+}
+
+/* ---------- The bar at the top ---------- */
+.site-head {
+  position: sticky; top: 0; z-index: 50;
+  height: var(--head-h);
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 0 max(16px, calc((100vw - 1080px) / 2 + 16px));
+  background: #070b16b8;
+  -webkit-backdrop-filter: saturate(1.4) blur(14px); backdrop-filter: saturate(1.4) blur(14px);
+  border-bottom: 1px solid var(--line);
+  view-transition-name: site-head;
+}
+.site-head a { color: var(--ink); text-decoration: none; }
+.site-head .logo { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; letter-spacing: .32em; text-transform: uppercase; white-space: nowrap; }
+.site-head .logo img { width: 26px; height: 26px; border-radius: 7px; }
+.site-head nav { display: flex; gap: 4px; }
+.site-head nav a { font-size: 15px; padding: 6px 12px; border-radius: 999px; color: var(--muted); transition: color .2s, background .2s; }
+.site-head nav a:hover { color: var(--ink); background: #ffffff0f; }
+.site-head nav a[aria-current="page"] { color: var(--ink); background: #ffffff14; }
+.site-head a:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+
+/* Over the home page's sky: clear at first, glass once the page scrolls under it. */
+.site-head.over { position: fixed; left: 0; right: 0; background: transparent; border-bottom-color: transparent;
+  -webkit-backdrop-filter: none; backdrop-filter: none; }
+@supports (animation-timeline: scroll()) {
+  .site-head.over { animation: head-glass linear both; animation-timeline: scroll(root); animation-range: 0 240px; }
+  @keyframes head-glass { to { background: #070b16b8; border-bottom-color: var(--line);
+    -webkit-backdrop-filter: saturate(1.4) blur(14px); backdrop-filter: saturate(1.4) blur(14px); } }
+}
+@supports not (animation-timeline: scroll()) {
+  .site-head.over { background: linear-gradient(180deg, #070b16cc, #070b1600); }
+}
+
+@media (max-width: 520px) {
+  .site-head .logo span { letter-spacing: .22em; font-size: 11px; }
+  .site-head nav a { padding: 6px 9px; font-size: 14px; }
+}
+@media (max-width: 400px) {
+  .site-head .logo span { display: none; }
+}
+
+/* ---------- Going from page to page ---------- */
+@view-transition { navigation: auto; }
+::view-transition-old(root) { animation: 160ms ease-in both page-out; }
+::view-transition-new(root) { animation: 340ms cubic-bezier(.2, .8, .2, 1) 60ms both page-in; }
+@keyframes page-out { to { opacity: 0; transform: translateY(-6px); } }
+@keyframes page-in { from { opacity: 0; transform: translateY(14px); } }
+/* The things on both pages (the bar, a product's name, its picture) move to their new place. */
+::view-transition-group(*) { animation-duration: 460ms; animation-timing-function: cubic-bezier(.2, .8, .2, 1); }
+::view-transition-group(site-head) { animation-duration: 0s; }
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+}

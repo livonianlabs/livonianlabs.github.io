@@ -7,6 +7,7 @@
 <meta name="description" content="A small studio in Riga, Latvia, making beautiful little things for your phone and desktop. No ads, no tracking.">
 <meta name="theme-color" content="#070b16">
 <link rel="icon" href="/favicon.png">
+<link rel="stylesheet" href="/site.css">
 <style>
 :root {
   --bg: #070b16;
@@ -119,8 +120,16 @@ footer a { color: var(--ink); }
   .phone img, .desk img { transition: none; }
 }
 </style>
+<script type="speculationrules">{"prerender":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}</script>
 </head>
 <body>
+<header class="site-head over">
+  <a class="logo" href="/"><img src="/favicon.png" alt="" width="26" height="26"><span>Livonian Labs</span></a>
+  <nav aria-label="Products">
+    <a href="/flipsky/">FlipSky</a>
+    <a href="/modern-meters-app/">Modern Meters</a>
+  </nav>
+</header>
 
 <header class="hero">
   <canvas id="sky" aria-hidden="true"></canvas>
@@ -144,7 +153,7 @@ footer a { color: var(--ink); }
   <section class="project reveal">
     <div>
       <p class="kicker">Android</p>
-      <h2>FlipSky</h2>
+      <h2 style="view-transition-name:fs-title">FlipSky</h2>
       <p data-i="fs">The flip clock is back. Cards that really flip, weather that moves with the sky over your own town, rain falling right on the widget, the sun and the moon where they are now. And dozens of styles to make it yours.</p>
       <ul class="chips">
         <li data-i="fs1">Flip clock</li><li data-i="fs2">Live weather</li><li data-i="fs3">Sun &amp; Moon</li><li data-i="fs4">Dozens of styles</li><li data-i="fs5">No ads</li>
@@ -153,7 +162,7 @@ footer a { color: var(--ink); }
     </div>
     <div class="show" style="position:relative">
       <div class="glow"></div>
-      <div class="phone"><div class="screen" id="phone">
+      <div class="phone" style="view-transition-name:fs-phone"><div class="screen" id="phone">
         <img src="/flipsky/img/01_flip_clock.jpg" alt="FlipSky flip clock widget" class="on">
         <img src="/flipsky/img/02_live_rain.jpg" alt="Live rain on the widget" loading="lazy">
         <img src="/flipsky/img/03_styles.jpg" alt="FlipSky styles" loading="lazy">
@@ -166,7 +175,7 @@ footer a { color: var(--ink); }
   <section class="project reveal">
     <div>
       <p class="kicker">Windows</p>
-      <h2>Modern Meters</h2>
+      <h2 style="view-transition-name:mm-title">Modern Meters</h2>
       <p data-i="mm">Your PC at a glance: CPU, GPU, network, drives and weather as gadgets on the desktop. Glass, neon, retro terminal, orbital station: pick a look and the numbers come alive.</p>
       <ul class="chips">
         <li>CPU &amp; GPU</li><li data-i="mm2">Network</li><li data-i="mm3">Drives</li><li data-i="mm4">Weather</li><li data-i="mm5">Many looks</li>
@@ -178,7 +187,7 @@ footer a { color: var(--ink); }
       </a>
     </div>
     <div class="show">
-      <div class="desk" id="desk">
+      <div class="desk" id="desk" style="view-transition-name:mm-shot">
         <img src="/modern-meters-app/img/styles-1.png" alt="Modern Meters gadgets in several looks" class="on">
         <img src="/modern-meters-app/img/styles-3.png" alt="" loading="lazy">
         <img src="/modern-meters-app/img/styles-4.png" alt="" loading="lazy">
