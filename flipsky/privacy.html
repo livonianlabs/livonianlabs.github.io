@@ -20,7 +20,7 @@
 <main>
 <p><a href="./">← FlipSky</a></p>
 <h1>FlipSky privacy policy</h1>
-<p><em>Last updated: 27 October 2026</em></p>
+<p><em>Last updated: 18 November 2026</em></p>
 <p>FlipSky is a flip clock and weather app with home screen widgets, made by Livonian Labs (Riga, Latvia).</p>
 <p>Contact: <a href="mailto:livonianlabs@gmail.com">livonianlabs@gmail.com</a></p>
 <h2>In short</h2>
@@ -31,12 +31,15 @@
 </ul>
 <h2>What the app uses and why</h2>
 <p><strong>Location.</strong> If you allow it, FlipSky reads your phone's approximate location (it never asks for precise location) while the app is open, to show the weather where you are. You can instead pick a city by hand, and the app then never reads your location. The coordinates are rounded to two decimal places (about 1 km) and sent to the weather services below. FlipSky does not read your location in the background.</p>
-<p><strong>City search and place names.</strong> Typing a city name, or turning coordinates into a place name, uses Android's built-in geocoder. On most phones it is provided by Google Play services.</p>
+<p><strong>City search and place names.</strong> A city name you type is first looked up in a list of cities built into the app (from GeoNames), on the phone itself. It is also passed to Android's built-in geocoder, which finds smaller places; turning coordinates into a place name uses that geocoder too. On most phones it is provided by Google Play services. Where the phone has none, or it gives no answer, the rounded coordinates (about 1 km) are sent to BigDataCloud's free reverse geocoding (api.bigdatacloud.net) to get the place's name. <a href="https://www.bigdatacloud.com/privacy-policy">BigDataCloud privacy policy</a></p>
 <p><strong>Weather data.</strong> To fetch weather, the app sends the rounded coordinates to:</p>
 <ul>
 <li>MET Norway (api.met.no), for the forecast. <a href="https://api.met.no/doc/TermsOfService">MET Norway terms</a></li>
-<li>Livonian Labs' air quality files on GitHub Pages (livonianlabs.github.io/flipsky-air), for air quality in Europe. The app downloads the file for its 1° square (about 100 km), so only that rough area is revealed. <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a></li>
+<li>Livonian Labs' data files on GitHub Pages (livonianlabs.github.io/flipsky-air), for air quality, pollen, the sea and its beaches, waves, gusts, the chance of rain and nearby weather stations. The app downloads the file for its square of the map (1° or larger, about 100 km), so only that rough area is revealed. <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a></li>
 <li>NOAA Space Weather Prediction Center (services.swpc.noaa.gov), for space weather. No location is sent there.</li>
+<li>NASA POWER (power.larc.nasa.gov), for a place's climate: its usual weather over past years, to compare today with. <a href="https://power.larc.nasa.gov">NASA POWER</a></li>
+<li>Nager.Date (date.nager.at), for public holidays. Only the country's two-letter code and the year are sent, no location; the country is found on the phone from the built-in list of cities. <a href="https://date.nager.at">Nager.Date</a></li>
+<li>timeapi.io, for the time zone of a city you added by hand, so its forecast shows in its own time. Only that city's rounded coordinates are sent, once. <a href="https://timeapi.io">timeapi.io</a></li>
 </ul>
 <p>Like any web service, these services see your IP address when the app connects. FlipSky sends no other personal data. The requests name the app and our contact address, as MET Norway requires.</p>
 <p><strong>Stored on your phone.</strong> Your settings and the last downloaded forecast are stored only in the app's private storage on your phone. Uninstalling the app deletes them.</p>
